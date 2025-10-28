@@ -384,6 +384,46 @@ else {
 unregister_code(KC_NO);
 }
  break;
+case A_RGB_FB:
+if(record->event.pressed) {
+register_code(KC_F8);
+}
+else {
+unregister_code(KC_F8);
+}
+ break;
+case A_RGB_TF:
+if(record->event.pressed) {
+register_code(KC_F9);
+}
+else {
+unregister_code(KC_F9);
+}
+ break;
+case A_RGB_JT:
+if(record->event.pressed) {
+register_code(KC_F10);
+}
+else {
+unregister_code(KC_F10);
+}
+ break;
+case A_RGB_CH:
+if(record->event.pressed) {
+register_code(KC_F11);
+}
+else {
+unregister_code(KC_F11);
+}
+ break;
+case A_RGB_NC:
+if(record->event.pressed) {
+register_code(KC_F12);
+}
+else {
+unregister_code(KC_F12);
+}
+ break;
  
   }
   return true;
