@@ -202,10 +202,9 @@ unregister_code(KC_RBRC);
  break;
 case A_NAV_FB:
 if(record->event.pressed) {
-register_code(KC_NO);
+SEND_STRING(SS_LCTL(SS_TAP(X_LEFT)));;
 }
 else {
-unregister_code(KC_NO);
 }
  break;
 case A_SYM_FB:
@@ -252,10 +251,9 @@ unregister_code(KC_TAB);
  break;
 case A_NAV_JT:
 if(record->event.pressed) {
-register_code(KC_NO);
+SEND_STRING(SS_LCTL(SS_TAP(X_RIGHT)));;
 }
 else {
-unregister_code(KC_NO);
 }
  break;
 case A_NUM_YN:
@@ -324,16 +322,18 @@ unregister_code(KC_HOME);
  break;
 case A_BASE_FC:
 if(record->event.pressed) {
-SEND_STRING(SS_LCTL(SS_TAP(X_LEFT)));;
+register_code(KC_PGUP);
 }
 else {
+unregister_code(KC_PGUP);
 }
  break;
 case A_BASE_TN:
 if(record->event.pressed) {
-SEND_STRING(SS_LCTL(SS_TAP(X_RIGHT)));;
+register_code(KC_PGDN);
 }
 else {
+unregister_code(KC_PGDN);
 }
  break;
 case A_MATH_TF:
@@ -362,10 +362,10 @@ unregister_code(KC_NO);
  break;
 case A_SYM_CH:
 if(record->event.pressed) {
-register_code(KC_NO);
+register_code(KC_GRV);
 }
 else {
-unregister_code(KC_NO);
+unregister_code(KC_GRV);
 }
  break;
 case A_MATH_YN:
