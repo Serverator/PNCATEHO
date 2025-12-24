@@ -362,10 +362,14 @@ unregister_code(KC_NO);
  break;
 case A_SYM_CH:
 if(record->event.pressed) {
-register_code(KC_GRV);
+  uint8_t mods = get_mods() | get_oneshot_mods();
+  if (mods & MOD_MASK_SHIFT) {
+    SEND_STRING("`");
+  } else {
+    SEND_STRING("~");
+  }
 }
 else {
-unregister_code(KC_GRV);
 }
  break;
 case A_MATH_YN:
